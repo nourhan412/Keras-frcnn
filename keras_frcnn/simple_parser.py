@@ -34,6 +34,7 @@ def get_data(input_path):
 				all_imgs[filename] = {}
 			else:
 				img = cv2.imread(filename)
+				assert not isinstance(img,type(None))
 				(rows,cols) = img.shape[:2]
 				all_imgs[filename]['filepath'] = filename
 				all_imgs[filename]['width'] = cols
