@@ -10,12 +10,14 @@ def get_data(input_path):
 	class_mapping = {}
 
 	visualise = True
-	
+	i=0
 	with open(input_path,'r') as f:
-
+ 
 		print('Parsing annotation files')
-
 		for line in f:
+			if i==0:
+				i=1
+				continue
 			line_split = line.strip().split(',')
 			(filename,x1,y1,x2,y2,class_name) = line_split
 
