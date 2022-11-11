@@ -13,7 +13,7 @@ from keras.layers import Input
 from keras.models import Model
 from keras.backend.tensorflow_backend import set_session
 from keras_frcnn import roi_helpers
-
+tf.compat.v1.disable_eager_execution()
 sys.setrecursionlimit(40000)
 
 config = tf.ConfigProto()
