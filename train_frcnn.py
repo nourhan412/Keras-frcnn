@@ -15,7 +15,7 @@ from tensorflow.keras.models import Model
 from keras_frcnn import config, data_generators
 from keras_frcnn import losses as losses
 import keras_frcnn.roi_helpers as roi_helpers
-from tensorflow.keras.utils import generic_utils
+from keras.utils import generic_utils
 import tensorflow as tf
 tf.compat.v1.disable_eager_execution()
 sys.setrecursionlimit(40000)
