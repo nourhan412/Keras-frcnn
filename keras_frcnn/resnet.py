@@ -153,7 +153,7 @@ def conv_block_td(input_tensor, kernel_size, filters, stage, block, input_shape,
     x = Activation('relu')(x)
     return x
 
-def nn_base(input_tensor=None, trainable=False):
+def nn_base(input_tensor=0, trainable=False):
 
     # Determine proper input shape
     if K.common.image_dim_ordering() == 'th':
