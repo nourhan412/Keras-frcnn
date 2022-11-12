@@ -157,9 +157,9 @@ def nn_base(input_tensor=0, trainable=False):
 
     # Determine proper input shape
     if K.common.image_dim_ordering() == 'th':
-        input_shape = (3,None, None)
+        input_shape = (3,0,0)
     else:
-        input_shape = (None,None, 3)
+        input_shape = (0,0, 3)
 
     if input_tensor is None:
         img_input = Input(shape=input_shape)
